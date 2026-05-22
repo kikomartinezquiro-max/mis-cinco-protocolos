@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiko Martínez · Cinco Caminos hacia tu Transformación</title>
+<meta name="description" content="Cinco caminos. Una transformación. Cinco protocolos terapéuticos integrativos para trabajar desde casa, con todo el acompañamiento de Kiko Martínez.">
+
+<!-- Open Graph para compartir con imagen de portada -->
+<meta property="og:title" content="Cinco caminos. Una transformación.">
+<meta property="og:description" content="Tu cuerpo. Tu emoción. Tu consciencia. Cinco protocolos terapéuticos integrativos para trabajar desde casa, con Kiko Martínez.">
+<meta property="og:image" content="https://kikomartinezquiro-max.github.io/mis-cinco-protocolos/portada.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://kikomartinezquiro-max.github.io/mis-cinco-protocolos/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cinco caminos. Una transformación.">
+<meta name="twitter:description" content="Tu cuerpo. Tu emoción. Tu consciencia. Cinco protocolos terapéuticos integrativos para trabajar desde casa.">
+<meta name="twitter:image" content="https://kikomartinezquiro-max.github.io/mis-cinco-protocolos/portada.jpg">
+
+<!-- Tipografías premium -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --negro: #0a0908;
+  --negro-suave: #14110f;
+  --crema: #f5efe6;
+  --crema-suave: #e8dfd0;
+  --oro: #d4a857;
+  --oro-claro: #f0d68c;
+  --oro-profundo: #a8822e;
+  --oro-suave: rgba(212, 168, 87, 0.15);
+  --oro-borde: rgba(212, 168, 87, 0.35);
+  --c-personalizado: #c89b6c;
+  --c-menopausia: #d4a5b8;
+  --c-nutricion: #9bb088;
+  --c-movimiento: #c08560;
+  --c-cec: #d4a857;
+  --serif: 'Cormorant Garamond', 'Times New Roman', serif;
+  --sans: 'Jost', system-ui, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--negro);
+  color: var(--crema);
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.cosmic-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse at top left, rgba(212, 168, 87, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(168, 130, 46, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, var(--negro) 0%, var(--negro-suave) 100%);
+}
+
+.particles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: var(--oro-claro);
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 10px var(--oro);
+  animation: float-up linear infinite;
+}
+
+@keyframes float-up {
+  0% { opacity: 0; transform: translateY(100vh) translateX(0) scale(0); }
+  10% { opacity: 0.6; transform: translateY(90vh) translateX(10px) scale(1); }
+  50% { opacity: 0.8; transform: translateY(50vh) translateX(-20px) scale(1); }
+  90% { opacity: 0.3; transform: translateY(10vh) translateX(15px) scale(0.8); }
+  100% { opacity: 0; transform: translateY(-10vh) translateX(0) scale(0); }
+}
+
+.nav-float {
+  position: fixed;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.6s ease 1s;
+}
+
+.nav-float.visible { opacity: 1; }
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid var(--oro-borde);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  display: block;
+}
+
+.nav-dot:hover, .nav-dot.active {
+  background: var(--oro);
+  box-shadow: 0 0 15px var(--oro);
+  transform: scale(1.3);
+}
+
+.nav-dot::before {
+  content: attr(data-label);
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--oro-claro);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.nav-dot:hover::before { opacity: 1; }
+
+.music-player {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 100;
+  background: rgba(10, 9, 8, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--oro-borde);
+  border-radius: 50px;
+  padding: 0.6rem 1.2rem 0.6rem 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  opacity: 0;
+  animation: fade-in 1s ease 2s forwards;
+  user-select: none;
+}
+
+.music-player:hover {
+  border-color: var(--oro);
+  box-shadow: 0 0 30px var(--oro-suave);
+}
+
+.music-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--oro) 0%, var(--oro-profundo) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px var(--oro-suave);
+}
+
+.music-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--negro);
+}
+
+.music-label {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--crema);
+  letter-spacing: 0.5px;
+}
+
+.music-player.playing .music-icon {
+  animation: pulse-gold 2s ease infinite;
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 20px var(--oro-suave); }
+  50% { box-shadow: 0 0 30px var(--oro), 0 0 50px var(--oro-suave); }
+}
+
+@keyframes fade-in { to { opacity: 1; } }
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 90vmin;
+  height: 90vmin;
+  border: 1px solid var(--oro-borde);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate-slow 60s linear infinite;
+  opacity: 0.4;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 70vmin;
+  height: 70vmin;
+  border: 1px dashed var(--oro-borde);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate-slow 90s linear infinite reverse;
+  opacity: 0.3;
+}
+
+@keyframes rotate-slow {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  animation: hero-reveal 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes hero-reveal {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-eyebrow {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--oro);
+  margin-bottom: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  animation: fade-in 1.2s ease 0.3s forwards;
+}
+
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--oro);
+}
+
+.hero-title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.8rem, 7vw, 6rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--crema);
+  margin-bottom: 2rem;
+}
+
+.hero-title .em {
+  font-style: italic;
+  font-weight: 400;
+  background: linear-gradient(135deg, var(--oro-claro) 0%, var(--oro) 50%, var(--oro-profundo) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 4s ease infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero-subtitle {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  color: var(--crema-suave);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  opacity: 0;
+  animation: fade-in 1.4s ease 0.6s forwards;
+  line-height: 1.5;
+}
+
+.hero-divider {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(180deg, transparent, var(--oro), transparent);
+  margin: 0 auto 2rem;
+  opacity: 0;
+  animation: fade-in 1.4s ease 0.9s forwards;
+}
+
+.hero-signature {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--oro-claro);
+  letter-spacing: 0.1em;
+  opacity: 0;
+  animation: fade-in 1.4s ease 1.2s forwards;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--oro);
+  opacity: 0;
+  animation: fade-in 1.4s ease 1.8s forwards, bob 2.5s ease infinite 2.5s;
+}
+
+.scroll-cue::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, var(--oro), transparent);
+  margin: 1rem auto 0;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
+.intro-section {
+  padding: 8rem 2rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.intro-mark {
+  font-family: var(--serif);
+  font-size: 3rem;
+  color: var(--oro);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.intro-title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--crema);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.intro-title em {
+  color: var(--oro-claro);
+  font-weight: 400;
+}
+
+.intro-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--crema-suave);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.intro-note {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--oro-claro);
+  letter-spacing: 0.05em;
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--oro-borde);
+  border-bottom: 1px solid var(--oro-borde);
+  display: inline-block;
+}
+
+.protocol {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.protocol-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.protocol:nth-child(even) .protocol-container { direction: rtl; }
+.protocol:nth-child(even) .protocol-container > * { direction: ltr; }
+
+.protocol-visual {
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.protocol-visual::before {
+  content: '';
+  position: absolute;
+  inset: 10%;
+  border: 1px solid var(--oro-borde);
+  border-radius: 50%;
+  animation: rotate-slow 40s linear infinite;
+}
+
+.protocol-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px dashed var(--oro-borde);
+  border-radius: 50%;
+  animation: rotate-slow 60s linear infinite reverse;
+  opacity: 0.5;
+}
+
+.protocol-icon-wrapper {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-bg) 0%, transparent 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.protocol-icon-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 15%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 60%);
+  filter: blur(40px);
+  opacity: 0.4;
+}
+
+.protocol-icon {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0 0 20px var(--accent));
+}
+
+.protocol-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: var(--accent-light);
+  fill: none;
+  stroke-width: 1.2;
+}
+
+.protocol-number {
+  position: absolute;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(12rem, 20vw, 22rem);
+  color: var(--accent);
+  opacity: 0.08;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+}
+
+.protocol-content { position: relative; z-index: 2; }
+
+.protocol-eyebrow {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.protocol-eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.protocol-title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  line-height: 1.05;
+  color: var(--crema);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.protocol-title em {
+  font-style: italic;
+  color: var(--accent-light);
+}
+
+.protocol-tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--accent-light);
+  margin-bottom: 2rem;
+  letter-spacing: 0.02em;
+}
+
+.protocol-description {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--crema-suave);
+  margin-bottom: 2rem;
+}
+
+.protocol-description em {
+  font-style: italic;
+  color: var(--accent-light);
+}
+
+.protocol-features {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+
+.protocol-features li {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 0.98rem;
+  color: var(--crema-suave);
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.protocol-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 12px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.protocol-features li strong {
+  font-weight: 500;
+  color: var(--accent-light);
+}
+
+.protocol-features li.feature-more {
+  font-style: italic;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--accent-light);
+  margin-top: 0.5rem;
+}
+
+.protocol-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.1rem 2.2rem;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent-light);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.protocol-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: translateX(-101%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.protocol-cta:hover::before { transform: translateX(0); }
+.protocol-cta:hover { color: var(--negro); }
+.protocol-cta span { position: relative; z-index: 2; }
+
+.protocol-cta svg {
+  position: relative;
+  z-index: 2;
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  transition: transform 0.4s ease;
+}
+
+.protocol-cta:hover svg { transform: translateX(4px); }
+
+.protocol-1 {
+  --accent: var(--c-personalizado);
+  --accent-light: #e6c4a0;
+  --accent-bg: rgba(200, 155, 108, 0.08);
+}
+
+.protocol-2 {
+  --accent: var(--c-menopausia);
+  --accent-light: #e8c4d2;
+  --accent-bg: rgba(212, 165, 184, 0.08);
+}
+
+.protocol-3 {
+  --accent: var(--c-nutricion);
+  --accent-light: #bccba8;
+  --accent-bg: rgba(155, 176, 136, 0.08);
+}
+
+.protocol-4 {
+  --accent: var(--c-movimiento);
+  --accent-light: #dba88a;
+  --accent-bg: rgba(192, 133, 96, 0.08);
+}
+
+.protocol-5 {
+  --accent: var(--c-cec);
+  --accent-light: var(--oro-claro);
+  --accent-bg: rgba(212, 168, 87, 0.18);
+}
+
+.protocol-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.protocol-separator::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--oro-borde), transparent);
+  transform: translateX(-50%);
+}
+
+.protocol-separator-mark {
+  width: 12px;
+  height: 12px;
+  background: var(--oro);
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 20px var(--oro);
+}
+
+/* MÉTODO CEC - JOYA DE LA CORONA */
+.protocol-5 {
+  background: radial-gradient(ellipse at center, rgba(212, 168, 87, 0.12) 0%, transparent 65%);
+  padding: 9rem 2rem;
+}
+
+.protocol-5 .protocol-visual { transform: scale(1.35); }
+
+.protocol-5 .protocol-visual::before,
+.protocol-5 .protocol-visual::after {
+  border-color: var(--oro);
+  opacity: 0.6;
+}
+
+.protocol-5 .protocol-icon-wrapper {
+  width: 75%;
+  height: 75%;
+}
+
+.protocol-5 .protocol-icon-wrapper::before {
+  filter: blur(70px);
+  opacity: 0.8;
+}
+
+.protocol-5 .protocol-icon {
+  filter: drop-shadow(0 0 40px var(--oro)) drop-shadow(0 0 80px var(--oro-suave));
+  animation: cec-glow 4s ease infinite;
+}
+
+@keyframes cec-glow {
+  0%, 100% { filter: drop-shadow(0 0 40px var(--oro)) drop-shadow(0 0 80px var(--oro-suave)); }
+  50% { filter: drop-shadow(0 0 60px var(--oro-claro)) drop-shadow(0 0 120px var(--oro)); }
+}
+
+.cec-crown {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: var(--oro);
+  font-size: 1.4em;
+}
+
+.cec-extra-ring {
+  position: absolute;
+  inset: -12%;
+  border: 1px solid var(--oro);
+  border-radius: 50%;
+  opacity: 0.35;
+  animation: rotate-slow 80s linear infinite;
+}
+
+.cec-extra-ring-2 {
+  position: absolute;
+  inset: -22%;
+  border: 1px dashed var(--oro);
+  border-radius: 50%;
+  opacity: 0.25;
+  animation: rotate-slow 120s linear infinite reverse;
+}
+
+/* TESTIMONIOS */
+.testimonials {
+  padding: 8rem 2rem;
+  position: relative;
+}
+
+.testimonials-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem;
+}
+
+.testimonials-mark {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  color: var(--oro);
+  margin-bottom: 1rem;
+}
+
+.testimonials-title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--crema);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.testimonials-title em {
+  color: var(--oro-claro);
+  font-style: italic;
+}
+
+.testimonials-subtitle {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--crema-suave);
+  line-height: 1.6;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  background: rgba(20, 17, 15, 0.5);
+  border: 1px solid var(--oro-borde);
+  border-radius: 2px;
+  padding: 2.5rem 2rem;
+  position: relative;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.testimonial:hover {
+  border-color: var(--oro);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(212, 168, 87, 0.15);
+}
+
+.testimonial-quote-mark {
+  position: absolute;
+  top: -10px;
+  left: 1.5rem;
+  font-family: var(--serif);
+  font-size: 5rem;
+  color: var(--oro);
+  line-height: 1;
+  opacity: 0.4;
+}
+
+.testimonial-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--crema-suave);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--oro-borde);
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--oro) 0%, var(--oro-profundo) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-weight: 500;
+  color: var(--negro);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-name {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--oro-claro);
+  letter-spacing: 0.05em;
+}
+
+.testimonial-protocol {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  color: var(--crema-suave);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+/* SECCIÓN FINAL */
+.final-section {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.final-mark {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  color: var(--oro);
+  margin-bottom: 1.5rem;
+}
+
+.final-title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--crema);
+  max-width: 900px;
+}
+
+.final-title em {
+  font-style: italic;
+  background: linear-gradient(135deg, var(--oro-claro) 0%, var(--oro) 50%, var(--oro-profundo) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 4s ease infinite;
+}
+
+.final-subtitle {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--crema-suave);
+  max-width: 700px;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.phone-block {
+  margin: 2rem 0 1rem;
+  padding: 3rem 4rem;
+  border: 1px solid var(--oro-borde);
+  border-radius: 2px;
+  background: rgba(20, 17, 15, 0.5);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  position: relative;
+  overflow: hidden;
+  max-width: 600px;
+  width: 100%;
+}
+
+.phone-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, var(--oro-suave) 0%, transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.phone-label {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--oro);
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.phone-number {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, var(--oro-claro) 0%, var(--oro) 50%, var(--oro-profundo) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 4s ease infinite;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.phone-number:hover { transform: scale(1.03); }
+
+.phone-icon {
+  display: inline-block;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+}
+
+.phone-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--oro);
+  filter: drop-shadow(0 0 10px var(--oro-suave));
+}
+
+.phone-message {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--crema-suave);
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+.signature-block {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--oro-borde);
+  max-width: 600px;
+}
+
+.signature-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--oro-claro);
+  margin-bottom: 0.5rem;
+}
+
+.signature-tagline {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--crema-suave);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+@media (max-width: 968px) {
+  .protocol {
+    min-height: auto;
+    padding: 5rem 1.5rem;
+  }
+  .protocol-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .protocol:nth-child(even) .protocol-container { direction: ltr; }
+  .protocol-visual {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .protocol-5 .protocol-visual { transform: scale(1.15); }
+  .nav-float { right: 1rem; }
+  .nav-dot::before { display: none; }
+  .music-player {
+    bottom: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+  }
+  .music-icon { width: 32px; height: 32px; }
+  .music-label { font-size: 0.8rem; }
+  .hero-eyebrow::before, .hero-eyebrow::after { width: 25px; }
+  .phone-block { padding: 2.5rem 1.5rem; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 1.5rem; }
+  .intro-section { padding: 5rem 1.5rem; }
+  .protocol { padding: 4rem 1.2rem; }
+  .protocol-5 { padding: 5rem 1.2rem; }
+  .testimonials { padding: 5rem 1.5rem; }
+  .final-section { padding: 5rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="cosmic-bg"></div>
+<div class="particles" id="particles"></div>
+
+<nav class="nav-float" id="navFloat">
+  <a href="#hero" class="nav-dot" data-label="Inicio" data-section="hero"></a>
+  <a href="#protocolo-1" class="nav-dot" data-label="Personalizado" data-section="protocolo-1"></a>
+  <a href="#protocolo-2" class="nav-dot" data-label="Menopausia" data-section="protocolo-2"></a>
+  <a href="#protocolo-3" class="nav-dot" data-label="Nutrición" data-section="protocolo-3"></a>
+  <a href="#protocolo-4" class="nav-dot" data-label="Movimiento" data-section="protocolo-4"></a>
+  <a href="#protocolo-5" class="nav-dot" data-label="Método CEC®" data-section="protocolo-5"></a>
+  <a href="#testimonios" class="nav-dot" data-label="Testimonios" data-section="testimonios"></a>
+  <a href="#contacto" class="nav-dot" data-label="Contacto" data-section="contacto"></a>
+</nav>
+
+<div class="music-player" id="musicPlayer">
+  <div class="music-icon">
+    <svg viewBox="0 0 24 24" id="musicSvg">
+      <path d="M8 5v14l11-7z"/>
+    </svg>
+  </div>
+  <span class="music-label" id="musicLabel">Activa la música</span>
+  <audio id="bgMusic" loop preload="none">
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Kiko Martínez · Terapeuta Integrativo</div>
+    <h1 class="hero-title">
+      Cinco caminos.<br>
+      <span class="em">Un mismo destino:</span><br>
+      tu transformación.
+    </h1>
+    <p class="hero-subtitle">
+      Cinco protocolos terapéuticos diseñados para acompañarte en el regreso
+      a tu cuerpo, a tu emoción y a tu consciencia. Para trabajar desde casa,
+      a tu ritmo, con todo mi acompañamiento.
+    </p>
+    <div class="hero-divider"></div>
+    <div class="hero-signature">Tu bienestar, mi máxima prioridad</div>
+  </div>
+  <div class="scroll-cue">Descubre el camino</div>
+</section>
+
+<!-- INTRO -->
+<section class="intro-section reveal">
+  <div class="intro-mark">✦</div>
+  <h2 class="intro-title">
+    No hay un único camino hacia el bienestar.<br>
+    Hay <em>cinco</em>. Y todos parten de ti.
+  </h2>
+  <p class="intro-text">
+    Cada protocolo es un universo propio, cuidadosamente construido para responder
+    a un momento de la vida, a una necesidad concreta, a un cuerpo y a una historia
+    que son únicos. Todos están pensados para que los lleves contigo y los practiques
+    desde casa, a tu ritmo.
+  </p>
+  <div class="intro-note">
+    Antes de comenzar, te enviaré un cuestionario para conocerte de verdad
+  </div>
+</section>
+
+<!-- PROTOCOLO 1 - PERSONALIZADO -->
+<section class="protocol protocol-1" id="protocolo-1">
+  <div class="protocol-number">I</div>
+  <div class="protocol-container">
+    <div class="protocol-visual reveal-left">
+      <div class="protocol-icon-wrapper">
+        <div class="protocol-icon">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="8" fill="currentColor" opacity="0.3"/>
+            <circle cx="50" cy="50" r="20" stroke="currentColor"/>
+            <circle cx="50" cy="50" r="32" stroke="currentColor" stroke-dasharray="2 4" opacity="0.6"/>
+            <path d="M50 18 L50 28 M50 72 L50 82 M18 50 L28 50 M72 50 L82 50" stroke="currentColor"/>
+            <path d="M27 27 L34 34 M66 66 L73 73 M27 73 L34 66 M66 34 L73 27" stroke="currentColor" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="protocol-content reveal-right">
+      <div class="protocol-eyebrow">Protocolo I</div>
+      <h2 class="protocol-title">Programa <em>Personalizado</em></h2>
+      <p class="protocol-tagline">Tu protocolo, hecho a tu medida, para trabajar desde casa</p>
+      <p class="protocol-description">
+        Un programa diseñado exclusivamente para ti, para que lo lleves contigo
+        y lo practiques en casa con sentido y con calma. Pensado especialmente
+        para personas con las que ya he tenido el placer de trabajar — y si aún
+        no hemos coincidido en consulta, podemos comenzar con una valoración
+        inicial conmigo, si así lo prefieres.
+      </p>
+      <ul class="protocol-features">
+        <li><strong>Cuestionario previo</strong> para conocerte en profundidad</li>
+        <li><strong>Programa integrativo</strong> con yoga, estiramientos, fortalecimiento y respiración</li>
+        <li><strong>Herramientas de coaching</strong>, lecturas, hábitos y suplementación</li>
+        <li><strong>Valoración inicial opcional</strong> si aún no hemos trabajado juntos</li>
+        <li class="feature-more">…y todo lo que necesite tu camino, único como tú</li>
+      </ul>
+      <a href="#contacto" class="protocol-cta">
+        <span>Quiero mi programa</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="protocol-separator"><div class="protocol-separator-mark"></div></div>
+
+<!-- PROTOCOLO 2 - MENOPAUSIA -->
+<section class="protocol protocol-2" id="protocolo-2">
+  <div class="protocol-number">II</div>
+  <div class="protocol-container">
+    <div class="protocol-visual reveal-left">
+      <div class="protocol-icon-wrapper">
+        <div class="protocol-icon">
+          <svg viewBox="0 0 100 100">
+            <path d="M65 30 A25 25 0 1 0 65 70 A20 20 0 1 1 65 30 Z" stroke="currentColor"/>
+            <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-dasharray="1 5" opacity="0.4"/>
+            <path d="M50 12 Q53 18 50 22 Q47 18 50 12 Z" fill="currentColor" opacity="0.6"/>
+            <path d="M50 78 Q53 84 50 88 Q47 84 50 78 Z" fill="currentColor" opacity="0.6"/>
+            <circle cx="30" cy="30" r="1.5" fill="currentColor"/>
+            <circle cx="72" cy="42" r="1" fill="currentColor"/>
+            <circle cx="28" cy="65" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="protocol-content reveal-right">
+      <div class="protocol-eyebrow">Protocolo II</div>
+      <h2 class="protocol-title">Equilibrio Vital · <em>Menopausia</em></h2>
+      <p class="protocol-tagline">Atravesar el cambio con plenitud, desde casa</p>
+      <p class="protocol-description">
+        Un programa específico para acompañarte en el climaterio y la menopausia,
+        diseñado para que lo practiques en tu hogar y a tu ritmo. No para "sobrellevar"
+        esta etapa, sino para habitarla con fuerza, con calma y con la sabiduría
+        que este momento te invita a recoger.
+      </p>
+      <ul class="protocol-features">
+        <li><strong>Cuestionario previo</strong> para diseñarlo a tu medida</li>
+        <li><strong>Ejercicio adaptado</strong> cardiovascular, óseo y muscular</li>
+        <li><strong>Regulación del sistema nervioso</strong> y coaching emocional</li>
+        <li><strong>Fitoterapia, suplementación, nutrición</strong> y hábitos circadianos</li>
+        <li class="feature-more">…y cuanto pida tu cuerpo en este momento de la vida</li>
+      </ul>
+      <a href="#contacto" class="protocol-cta">
+        <span>Empieza tu programa</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="protocol-separator"><div class="protocol-separator-mark"></div></div>
+
+<!-- PROTOCOLO 3 - NUTRICIÓN -->
+<section class="protocol protocol-3" id="protocolo-3">
+  <div class="protocol-number">III</div>
+  <div class="protocol-container">
+    <div class="protocol-visual reveal-left">
+      <div class="protocol-icon-wrapper">
+        <div class="protocol-icon">
+          <svg viewBox="0 0 100 100">
+            <path d="M50 15 Q70 30 70 55 Q70 75 50 85 Q30 75 30 55 Q30 30 50 15 Z" stroke="currentColor"/>
+            <path d="M50 25 L50 78" stroke="currentColor" stroke-width="0.8"/>
+            <path d="M50 38 Q42 42 38 50" stroke="currentColor" stroke-width="0.8" opacity="0.7"/>
+            <path d="M50 38 Q58 42 62 50" stroke="currentColor" stroke-width="0.8" opacity="0.7"/>
+            <path d="M50 52 Q42 56 38 64" stroke="currentColor" stroke-width="0.8" opacity="0.7"/>
+            <path d="M50 52 Q58 56 62 64" stroke="currentColor" stroke-width="0.8" opacity="0.7"/>
+            <circle cx="50" cy="55" r="3" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="protocol-content reveal-right">
+      <div class="protocol-eyebrow">Protocolo III</div>
+      <h2 class="protocol-title">Protocolo <em>Nutricional</em></h2>
+      <p class="protocol-tagline">Comer con consciencia, vivir con energía, desde tu propia cocina</p>
+      <p class="protocol-description">
+        Un plan quincenal personalizado que une nutrición funcional y coaching
+        nutricional emocional, pensado para integrarlo en tu día a día en casa.
+        No es una dieta. Es una forma nueva de relacionarte con la comida,
+        con tu cuerpo y con tus rutinas.
+      </p>
+      <ul class="protocol-features">
+        <li><strong>Cuestionario previo</strong> para conocer tus hábitos y tu historia</li>
+        <li><strong>Plan alimentario de 14 días</strong> con rotación real de menús</li>
+        <li><strong>Coaching nutricional emocional</strong> como bloque central</li>
+        <li><strong>Ejercicio personalizado</strong>: cardio, fuerza y movilidad</li>
+        <li class="feature-more">…y todo lo que tu historia con la comida te esté pidiendo</li>
+      </ul>
+      <a href="#contacto" class="protocol-cta">
+        <span>Solicita tu plan</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="protocol-separator"><div class="protocol-separator-mark"></div></div>
+
+<!-- PROTOCOLO 4 - MOVIMIENTO INTEGRAL -->
+<section class="protocol protocol-4" id="protocolo-4">
+  <div class="protocol-number">IV</div>
+  <div class="protocol-container">
+    <div class="protocol-visual reveal-left">
+      <div class="protocol-icon-wrapper">
+        <div class="protocol-icon">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="28" r="6" stroke="currentColor"/>
+            <path d="M50 36 L50 60" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M50 42 L32 52 M50 42 L68 52" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M50 60 L36 82 M50 60 L64 82" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="50" cy="50" r="42" stroke="currentColor" stroke-dasharray="3 6" opacity="0.4"/>
+            <path d="M14 50 L18 50 M82 50 L86 50" stroke="currentColor"/>
+            <path d="M22 22 L25 25 M75 25 L78 22 M22 78 L25 75 M75 75 L78 78" stroke="currentColor" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="protocol-content reveal-right">
+      <div class="protocol-eyebrow">Protocolo IV</div>
+      <h2 class="protocol-title">Programa de <em>Movimiento Integral</em></h2>
+      <p class="protocol-tagline">Cuatro pilares, un cuerpo entero, todo en tu salón</p>
+      <p class="protocol-description">
+        Un programa de movimiento multidisciplinar que une yoga, fuerza,
+        movilidad y calistenia, diseñado para practicarlo en casa sin necesidad
+        de gimnasio. Adaptable a cualquier edad y capacidad — desde la búsqueda
+        del rendimiento hasta el cuidado de la fragilidad.
+      </p>
+      <ul class="protocol-features">
+        <li><strong>Cuestionario previo</strong> para adaptarlo a tu nivel y objetivos</li>
+        <li><strong>Cuatro pilares</strong>: yoga, fuerza, movilidad-core, calistenia</li>
+        <li><strong>Gamificación</strong> con sistema de XP, medallas y retos</li>
+        <li><strong>Calendario por fases</strong> y modo express para días intensos</li>
+        <li class="feature-more">…y cuanto requiera tu cuerpo para reconciliarse con el movimiento</li>
+      </ul>
+      <a href="#contacto" class="protocol-cta">
+        <span>Activa tu movimiento</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="protocol-separator"><div class="protocol-separator-mark"></div></div>
+
+<!-- PROTOCOLO 5 - MÉTODO CEC -->
+<section class="protocol protocol-5" id="protocolo-5">
+  <div class="protocol-container">
+    <div class="protocol-visual reveal-left">
+      <div class="cec-extra-ring-2"></div>
+      <div class="cec-extra-ring"></div>
+      <div class="protocol-icon-wrapper">
+        <div class="protocol-icon">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="32" r="14" stroke="currentColor" opacity="0.9"/>
+            <circle cx="32" cy="62" r="14" stroke="currentColor" opacity="0.9"/>
+            <circle cx="68" cy="62" r="14" stroke="currentColor" opacity="0.9"/>
+            <circle cx="50" cy="50" r="6" fill="currentColor" opacity="0.5"/>
+            <circle cx="50" cy="50" r="42" stroke="currentColor" stroke-dasharray="1 3" opacity="0.5"/>
+            <text x="50" y="36" text-anchor="middle" font-family="serif" font-size="9" fill="currentColor" opacity="0.9">C</text>
+            <text x="32" y="66" text-anchor="middle" font-family="serif" font-size="9" fill="currentColor" opacity="0.9">E</text>
+            <text x="68" y="66" text-anchor="middle" font-family="serif" font-size="9" fill="currentColor" opacity="0.9">C</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="protocol-content reveal-right">
+      <div class="protocol-eyebrow"><span class="cec-crown">✦</span>La Culminación</div>
+      <h2 class="protocol-title">Método Integrativo <em>CEC®</em></h2>
+      <p class="protocol-tagline">Cuerpo · Emoción · Consciencia</p>
+      <p class="protocol-description">
+        Mi metodología propia. La síntesis de todo lo aprendido en años de práctica
+        e investigación personal. Un programa terapéutico completo para trabajar
+        desde casa, que une coaching integrativo, regulación somática y un trabajo
+        profundo de consciencia. No es un protocolo más. Es <em>el</em> protocolo.
+      </p>
+      <ul class="protocol-features">
+        <li><strong>Cuestionario CEC®</strong> en profundidad, base de todo el programa</li>
+        <li><strong>Escala ER-CEC®</strong> y perfil regulador personalizado</li>
+        <li><strong>Coaching Terapéutico Integrativo</strong> con herramientas únicas</li>
+        <li><strong>Prácticas somáticas, emocionales y de consciencia</strong> cuidadosamente seleccionadas</li>
+        <li><strong>Nutrición consciente, fitoterapia, lecturas y hábitos</strong> integrados</li>
+        <li class="feature-more">…y todo aquello que tu proceso despierte y necesite encontrar</li>
+      </ul>
+      <a href="#contacto" class="protocol-cta">
+        <span>Acceder al Método CEC®</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testimonials reveal" id="testimonios">
+  <div class="testimonials-header">
+    <div class="testimonials-mark">✦</div>
+    <h2 class="testimonials-title">
+      Lo que cuentan <em>quienes ya han recorrido el camino</em>
+    </h2>
+    <p class="testimonials-subtitle">
+      Estas son algunas de las palabras que me han llegado. Las guardo con gratitud,
+      porque cada una habla de un viaje propio, de un cambio real, de una vida
+      que se abre.
+    </p>
+  </div>
+
+  <div class="testimonials-grid">
+    <div class="testimonial">
+      <div class="testimonial-quote-mark">"</div>
+      <p class="testimonial-text">
+        El programa me devolvió algo que creía perdido: la confianza en mi propio
+        cuerpo. Cada práctica está pensada con un cuidado que se nota. Gracias,
+        Kiko, por acompañarme con tanta delicadeza.
+      </p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">M</div>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">María José</span>
+          <span class="testimonial-protocol">Programa Personalizado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-quote-mark">"</div>
+      <p class="testimonial-text">
+        Llegué agotada y desorientada con la menopausia. El programa fue para mí
+        un refugio y una guía. Hoy duermo mejor, me siento más fuerte y, sobre todo,
+        más conectada conmigo misma. Le estaré siempre agradecida.
+      </p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">C</div>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">Carmen</span>
+          <span class="testimonial-protocol">Equilibrio Vital · Menopausia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-quote-mark">"</div>
+      <p class="testimonial-text">
+        Pensé que era otro plan de comidas más. Pero el bloque de coaching
+        emocional me ha cambiado la forma de relacionarme con la comida y conmigo
+        mismo. Por fin no hay culpa, hay consciencia. Gracias de corazón.
+      </p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">A</div>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">Andrés</span>
+          <span class="testimonial-protocol">Protocolo Nutricional</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-quote-mark">"</div>
+      <p class="testimonial-text">
+        Con 62 años pensaba que ya no podría volver a sentirme ágil. El programa
+        de movimiento es una joya: progresivo, claro y precioso de mirar. Cada
+        semana me siento más viva. Kiko, gracias por pensar en personas como yo.
+      </p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">P</div>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">Pilar</span>
+          <span class="testimonial-protocol">Movimiento Integral</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-quote-mark">"</div>
+      <p class="testimonial-text">
+        El Método CEC® es otra cosa. Es difícil de explicar lo que pasa cuando
+        cuerpo, emoción y consciencia trabajan juntos así. He encontrado una
+        coherencia interna que no sabía que me faltaba. Gracias, Kiko, por crear
+        algo tan valioso.
+      </p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">E</div>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">Elena</span>
+          <span class="testimonial-protocol">Método Integrativo CEC®</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-quote-mark">"</div>
+      <p class="testimonial-text">
+        Lo que más valoro es la atención al detalle. Se nota que cada protocolo
+        está pensado con cariño, no es algo en serie. Sentirse así de cuidada
+        en un programa es muy raro. Gracias por tu trabajo, Kiko.
+      </p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">L</div>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">Lucía</span>
+          <span class="testimonial-protocol">Programa Personalizado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="final-section reveal" id="contacto">
+  <div class="final-mark">✦ ✦ ✦</div>
+  <h2 class="final-title">
+    El primer paso es siempre <em>una decisión</em>.<br>
+    El segundo, una conversación.
+  </h2>
+  <p class="final-subtitle">
+    Llámame o escríbeme por WhatsApp. Estaré encantado de orientarte
+    hacia el protocolo que más se ajusta a ti en este momento.
+  </p>
+
+  <div class="phone-block">
+    <div class="phone-label">Llámame o escríbeme</div>
+    <a href="tel:+34665865557" class="phone-number">
+      <span class="phone-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.2c.27-.27.35-.66.24-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+      </span>665 865 557
+    </a>
+    <p class="phone-message">
+      Estaré encantado de darte toda la información que necesites, con todo
+      el tiempo del mundo y sin ningún compromiso.
+    </p>
+  </div>
+
+  <div class="signature-block">
+    <div class="signature-name">Kiko Martínez</div>
+    <div class="signature-tagline">Terapeuta Natural · Método Integrativo CEC®</div>
+  </div>
+</section>
+
+<script>
+const particlesContainer = document.getElementById('particles');
+const particleCount = window.innerWidth < 768 ? 20 : 40;
+
+for (let i = 0; i < particleCount; i++) {
+  const particle = document.createElement('div');
+  particle.className = 'particle';
+  const size = Math.random() * 3 + 1;
+  particle.style.width = size + 'px';
+  particle.style.height = size + 'px';
+  particle.style.left = Math.random() * 100 + '%';
+  particle.style.animationDuration = (Math.random() * 20 + 15) + 's';
+  particle.style.animationDelay = Math.random() * 20 + 's';
+  particlesContainer.appendChild(particle);
+}
+
+const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -80px 0px' };
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, observerOptions);
+
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+  revealObserver.observe(el);
+});
+
+const navFloat = document.getElementById('navFloat');
+const navDots = document.querySelectorAll('.nav-dot');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) navFloat.classList.add('visible');
+  else navFloat.classList.remove('visible');
+});
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navDots.forEach(dot => {
+        dot.classList.toggle('active', dot.dataset.section === id);
+      });
+    }
+  });
+}, { threshold: 0.4 });
+
+document.querySelectorAll('section[id]').forEach(section => {
+  sectionObserver.observe(section);
+});
+
+const musicPlayer = document.getElementById('musicPlayer');
+const bgMusic = document.getElementById('bgMusic');
+const musicSvg = document.getElementById('musicSvg');
+const musicLabel = document.getElementById('musicLabel');
+let isPlaying = false;
+
+const playIcon = '<path d="M8 5v14l11-7z"/>';
+const pauseIcon = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+
+musicPlayer.addEventListener('click', () => {
+  if (isPlaying) {
+    bgMusic.pause();
+    musicSvg.innerHTML = playIcon;
+    musicLabel.textContent = 'Activa la música';
+    musicPlayer.classList.remove('playing');
+    isPlaying = false;
+  } else {
+    bgMusic.play().then(() => {
+      musicSvg.innerHTML = pauseIcon;
+      musicLabel.textContent = 'Música en directo';
+      musicPlayer.classList.add('playing');
+      isPlaying = true;
+    }).catch(err => {
+      musicLabel.textContent = 'Añade tu archivo musica.mp3';
+      console.log('Audio file not found yet:', err);
+    });
+  }
+});
+</script>
+
+</body>
+</html>
